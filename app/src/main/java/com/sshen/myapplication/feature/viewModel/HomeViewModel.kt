@@ -10,7 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class HomeViewModel {
-    class HomeViewModel (private val repository: ItemsRepository = ItemsRepository()): ViewModel() {
+    class HomeViewModel (private val repository: ItemsRepository = ItemsRepository.getInstance()): ViewModel() {
 
         init {
             viewModelScope.launch(Dispatchers.IO) {
